@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n][n];
+    for(int i=0;  i<n; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            cin>>arr[i][j];
+        }
+    }
+
+    int rarr[n][n];
+    for(int i=0;  i<n; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            rarr[j][n-i-1]=arr[i][j];
+        }
+    }
+
+    for(int i=0;  i<n; i++)
+    {
+        for(int j=0; j<n; j++)
+        {
+            cout<<rarr[i][j]<<" ";
+        }
+        cout<<endl;
+    }   
+}
+
